@@ -12,12 +12,12 @@ for _ in range(m):
     grh[b].append(a)
 
 cnt = 0
-def dfs(a):
+def find(a):
     visit[a] = 1
     global cnt
     for i in grh[a]:
         if visit[i] == 0:
             dfs(i)
             cnt += 1 
-dfs(1)
+find(1)
 print(cnt)
